@@ -47,8 +47,9 @@ function draw(){
 
 
 
-        cell.addEventListener("mousedown", ()=>{
+        cell.addEventListener("mousedown", (e)=>{
             mouseClicking = true;
+            e.preventDefault();
         });
 
         cell.addEventListener("mouseup", ()=>{
