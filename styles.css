@@ -15,11 +15,13 @@ html{
     align-items:center;
     min-height:90vh;
     outline: 1px solid black;
+    
 }
 
 #grid-container{
   outline: 1px solid white;
-    margin-left:5rem;
+  margin-left:5rem;
+  
 }
 .settings-panel{
     display:flex;
@@ -36,7 +38,7 @@ html{
     display:flex;
     margin:2rem;
     height:10vh;
-    outline: 1px solid white;
+ 
 }
 
 .cell {

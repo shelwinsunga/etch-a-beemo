@@ -36,14 +36,39 @@ function makeColumns(cellNum) {
 defaultGrid(32);
 
 const allCells = document.querySelectorAll(".cell");
+
+var mouseClicking = false;
+
+
+
 function draw(){
     allCells.forEach((cell) =>{
-        cell.addEventListener('mouseover', ()=>{
-            cell.style.backgroundColor="red";
-        })
-        cell.addEventListener('mousedown' , () =>{
-            cell.style.backgroundColor="red";
+        
+
+
+
+        cell.addEventListener("mousedown", ()=>{
+            mouseClicking = true;
         });
+
+        cell.addEventListener("mouseup", ()=>{
+            mouseClicking = false;
+        });
+        
+        cell.addEventListener("mousemove", () =>{
+            if(mouseClicking == true){
+                cell.style.backgroundColor="white";
+
+            }
+        });
+
+        
+
+
+       
+        
+      
+      
     });
 
 }
