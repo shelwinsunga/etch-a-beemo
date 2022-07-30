@@ -1,6 +1,6 @@
 //Sets important constants and variables
 
-const container = document.getElementById("container");
+const container = document.getElementById("grid-container");
 let rows = document.getElementsByClassName("gridRow");
 let cells = document.getElementsByClassName("cell");
 

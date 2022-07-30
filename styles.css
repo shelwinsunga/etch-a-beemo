@@ -1,3 +1,31 @@
+.container {
+    display:flex;
+    flex-flow:row;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    outline: 1px solid black;
+}
+
+#grid-container{
+    margin-left:5rem;
+}
+.settings-panel{
+    display:flex;
+    flex-flow:column wrap;
+    justify-content:space-between;
+    align-items:center;
+    min-height:50vh;
+    border:1px solid black;
+    border-radius:10%;
+    min-width:25rem;
+}
+
+.option-item{
+    margin:2rem;
+    outline:1px solid black;
+}
+
 .cell {
     border: 1px solid gray;
     min-width: 30px;
