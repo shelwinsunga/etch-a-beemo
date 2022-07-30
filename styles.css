@@ -3,8 +3,8 @@ body{
     flex-flow:column;
 }
 html{
-    background-color:#282a36;
-    color:white;
+    background-color:#1bbcb1;
+    color:#02312c;
 }
 
 .container {
@@ -19,7 +19,7 @@ html{
 }
 
 #grid-container{
-  outline: 5px solid white;
+  outline: 18px solid #02312c;
   margin-left:5rem;
   border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -32,35 +32,66 @@ html{
     flex-flow:column wrap;
     justify-content:space-between;
     align-items:center;
-    min-height:50vh;
+    min-height:60vh;
     border:1px solid rgb(255, 255, 255);
     border-radius:10%;
     min-width:25rem;
 }
 
 .option-item{
+  outline:1px solid black;
     display:flex;
     flex-flow:column;
     justify-content:center;
     align-items:center;
     margin:2rem;
-    height:10vh;
+    height:15vh;
+    
 }
 
-#color-picker{
-  border: 2px solid rgb(255, 255, 255);
-  border-color:rgb(255, 255, 255);
-  width:100%;
-  height:100%;
-  background-color: transparent;
 
+#clear{
+  background-color: #f05557;
+  border: 2px solid #4b080b;
+  border-radius: 30px;
+  box-shadow: #4b080b 4px 4px 0 0;
+  color: #301111;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
+
+#clear:hover {
+  background-color: #f6999a;
+}
+
+#clear:active {
+  box-shadow: #301111 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-74 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
 
 
 .cell {
     min-width: 30px;
     min-height: 30px;
     display: inline-block;
+    background:#c5e5d6;
     
   }
 
@@ -69,9 +100,7 @@ html{
     margin:0;
   }
 
-  .cell:hover{
-    background-color:rgb(255, 255, 255);
-  }
+  
 
   #clear{
     display:flex;
@@ -80,6 +109,20 @@ html{
 
 
   }
+
+
+  #color-picker{
+   background-color: red;;
+   border-radius:10px;
+   width:25rem;
+   height:15vh;
+  }
+
+
+
+
+
+
 
   .gallery-container{
     display:flex;

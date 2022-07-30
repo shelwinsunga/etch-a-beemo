@@ -38,7 +38,7 @@ function makeColumns(cellNum) {
     };
 };
 
-defaultGrid(36);
+defaultGrid(16);
 
 const allCells = document.querySelectorAll(".cell");
 
@@ -50,7 +50,7 @@ var mouseClicking = false;
 
 function draw(){
     var pixelColor = document.getElementById("color-picker");
-    var aColor = "white";
+    var aColor = "#002222";
     
 
     allCells.forEach((cell) =>{
@@ -84,7 +84,7 @@ function clearGrid(){
     const clearbtn = document.getElementById('clear');
     clearbtn.addEventListener('click', () => { 
         allCells.forEach((cell) =>{
-            cell.style.backgroundColor="transparent";
+            cell.style.backgroundColor="#c5e5d6";
 
         });
 
