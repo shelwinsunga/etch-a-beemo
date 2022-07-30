@@ -1,3 +1,12 @@
+body{
+    display:flex;
+    flex-flow:column;
+}
+html{
+    background-color:#282a36;
+    color:white;
+}
+
 .container {
     display:flex;
     flex-flow:row;
@@ -16,18 +25,20 @@
     justify-content:space-between;
     align-items:center;
     min-height:50vh;
-    border:1px solid black;
+    border:1px solid rgb(255, 255, 255);
     border-radius:10%;
     min-width:25rem;
 }
 
 .option-item{
+    display:flex;
     margin:2rem;
-    outline:1px solid black;
+    height:10vh;
+    outline: 1px solid white;
 }
 
 .cell {
-    border: 1px solid gray;
+    outline: 1px solid gray;
     min-width: 30px;
     min-height: 30px;
     display: inline-block;
@@ -38,4 +49,16 @@
   .gridRow{
     line-height: 0;
     margin:0;
+  }
+
+  .cell:hover{
+    background-color:rgb(255, 255, 255);
+  }
+
+  #clear{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+
   }
