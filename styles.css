@@ -8,15 +8,17 @@ html{
 }
 
 .container {
+
     display:flex;
     flex-flow:row;
     justify-content:center;
     align-items:center;
-    min-height:100vh;
+    min-height:90vh;
     outline: 1px solid black;
 }
 
 #grid-container{
+  outline: 1px solid white;
     margin-left:5rem;
 }
 .settings-panel{
@@ -38,13 +40,11 @@ html{
 }
 
 .cell {
-    outline: 1px solid gray;
     min-width: 30px;
     min-height: 30px;
     display: inline-block;
     
   }
-
 
   .gridRow{
     line-height: 0;
@@ -61,4 +61,10 @@ html{
     align-items:center;
 
 
+  }
+
+  .gallery-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
   }

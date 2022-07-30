@@ -34,3 +34,36 @@ function makeColumns(cellNum) {
 };
 
 defaultGrid(32);
+
+const allCells = document.querySelectorAll(".cell");
+function draw(){
+    allCells.forEach((cell) =>{
+        cell.addEventListener('mouseover', ()=>{
+            cell.style.backgroundColor="red";
+        })
+        cell.addEventListener('mousedown' , () =>{
+            cell.style.backgroundColor="red";
+        });
+    });
+
+}
+
+draw();
+
+
+function clearGrid(){
+    const clearbtn = document.getElementById('clear');
+    clearbtn.addEventListener('click', () => { 
+        allCells.forEach((cell) =>{
+            cell.style.backgroundColor="transparent";
+
+        });
+
+
+    });
+
+}
+
+clearGrid();
+
+document.allCells.style.backgroundColor="red";
