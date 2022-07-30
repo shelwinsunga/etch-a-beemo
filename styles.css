@@ -36,10 +36,22 @@ html{
 
 .option-item{
     display:flex;
+    flex-flow:column;
+    justify-content:center;
+    align-items:center;
     margin:2rem;
     height:10vh;
- 
 }
+
+#color-picker{
+  border: 2px solid rgb(255, 255, 255);
+  border-color:rgb(255, 255, 255);
+  width:100%;
+  height:100%;
+  background-color: transparent;
+
+}
+
 
 .cell {
     min-width: 30px;

@@ -41,12 +41,14 @@ var mouseClicking = false;
 
 
 
+
+
 function draw(){
+    var pixelColor = document.getElementById("color-picker");
+    var aColor = "white";
+    
+
     allCells.forEach((cell) =>{
-        
-
-
-
         cell.addEventListener("mousedown", (e)=>{
             mouseClicking = true;
             e.preventDefault();
@@ -58,23 +60,19 @@ function draw(){
         
         cell.addEventListener("mousemove", () =>{
             if(mouseClicking == true){
-                cell.style.backgroundColor="white";
+                cell.style.backgroundColor=aColor;
 
             }
         });
 
-        
-
-
-       
-        
-      
-      
+        pixelColor.addEventListener("input", () =>{
+            aColor = pixelColor.value;
+        });
     });
 
 }
 
-draw();
+// draw();
 
 
 function clearGrid(){
@@ -90,6 +88,9 @@ function clearGrid(){
 
 }
 
-clearGrid();
+function main(){
+    draw();
+    clearGrid();
+}
 
-document.allCells.style.backgroundColor="red";
+main();
