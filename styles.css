@@ -57,6 +57,7 @@ html{
     min-width: 30px;
     min-height: 30px;
     display: inline-block;
+    outline:1px solid black;
     
   }
 
