@@ -28,7 +28,7 @@ function makeColumns(cellNum) {
     for (i = 0; i < rows.length; i++) {
         for (j = 0; j < cellNum; j++) {
             //calculate enough pixels to change resolution without changing total size.
-            var validRes = 960 / cellNum;
+            var validRes = 800 / cellNum;
             let newCell = document.createElement("div");
             rows[j].appendChild(newCell).className = "cell";
             newCell.style.minHeight= validRes + "px";
