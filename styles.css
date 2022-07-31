@@ -78,11 +78,34 @@ html{
   transform: translate(2px, 2px);
 }
 
-@media (min-width: 768px) {
-  .button-74 {
-    min-width: 120px;
-    padding: 0 25px;
-  }
+
+
+#Eraser{
+  background-color: #f05557;
+  border: 2px solid #4b080b;
+  border-radius: 30px;
+  box-shadow: #4b080b 4px 4px 0 0;
+  color: #301111;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#Eraser:hover {
+  background-color: #f6999a;
+}
+
+#Eraser:active {
+  box-shadow: #301111 2px 2px 0 0; 
+  transform: translate(2px, 2px);
 }
 
 

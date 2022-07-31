@@ -85,6 +85,7 @@ var mouseClicking = false;
 function draw(){
     const allCells = document.querySelectorAll(".cell");
     var pixelColor = document.getElementById("color-picker");
+    const eraserbtn = document.getElementById('Eraser');
     var aColor = "#002222";
     
 
@@ -113,11 +114,29 @@ function draw(){
         pixelColor.addEventListener("input", () =>{
             aColor = pixelColor.value;
         });
+
+
+    });
+    eraserbtn.addEventListener('click', () => { 
+        aColor = "#c5e5d6";
     });
 
 }
 
 // draw();
+
+function eraser(){
+    const allCells = document.querySelectorAll(".cell");
+    
+    clearbtn.addEventListener('click', () => { 
+        destroyGrid();
+        defaultGrid(size);
+        draw(); 
+    });
+
+}
+
+
 
 
 function clearGrid(){
