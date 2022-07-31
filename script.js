@@ -5,7 +5,7 @@
 const container = document.getElementById("grid-container");
 let rows = document.getElementsByClassName("gridRow");
 let cells = document.getElementsByClassName("cell");
-var size = 4;
+var size = 16;
 
 //Creates a default grid sized 16x16
 function defaultGrid(size) {
@@ -121,24 +121,25 @@ function clearGrid() {
   });
 }
 
-var state = [];
+// var state = [];
 
-function saveState() {
-  var cellInfo = [];
-  const savebtn = document.getElementById("save");
-  savebtn.addEventListener("click", () => {
-    state = [];
-    allCells.forEach((cell) => {
-      cellInfo = [cell.id, window.getComputedStyle(cell).backgroundColor];
-      state.push(cellInfo);
-    });
+// function saveState() {
+//   var cellInfo = [];
+//   const savebtn = document.getElementById("save");
+//   savebtn.addEventListener("click", () => {
+//     state = [];
+//     allCells.forEach((cell) => {
+//       cellInfo = [cell.id, window.getComputedStyle(cell).backgroundColor];
+//       state.push(cellInfo);
+//     });
     
-    for(let i = 0; i < state.length * 2; i++){
-        console.log(state[i][0] + " " + state[i][1]);
-    }
+//     for(let i = 0; i < state.length * 2; i++){
+//         console.log(state[i][0] + " " + state[i][1]);
+//     }
 
-  });
-}
+
+//   });
+// }
 
 function main() {
   changeResolution();
@@ -148,3 +149,7 @@ function main() {
 }
 
 main();
+
+
+
+
