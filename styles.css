@@ -74,7 +74,7 @@ html{
 }
 
 #clear:active {
-  box-shadow: #301111 2px 2px 0 0;
+  box-shadow: #301111 2px 2px 0 0; 
   transform: translate(2px, 2px);
 }
 
@@ -88,6 +88,7 @@ html{
 
 
 .cell {
+    outline: 1px solid black;
     min-width: 30px;
     min-height: 30px;
     display: inline-block;
@@ -106,13 +107,12 @@ html{
     display:flex;
     justify-content:center;
     align-items:center;
-
-
   }
+  
 
 
   #color-picker{
-   background-color: red;;
+   background-color: rgb(0, 0, 0);;
    border-radius:10px;
    width:25rem;
    height:15vh;
