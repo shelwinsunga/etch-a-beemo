@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Roboto:ital,wght@0,400;0,900;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Roboto:ital,wght@0,400;0,700;0,900;1,300&display=swap');
+
 body{
     display:flex;
     flex-flow:column;
@@ -21,13 +24,19 @@ html{
     flex-flow:column;
     align-items: center;
     justify-content:center;
-    min-height:90vh;
-    
+    min-height:50vh;
+}
+
+.title h1{
+  font-size:80px;
+  color:#0C5D48;
+  font-family:'Roboto';
+  font-weight:900;
+  text-shadow: 2px 8px 3px rgba(0,0,0,0.3);
 }
 
 #grid-container{
   border: 36px solid #02312c;
-
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
