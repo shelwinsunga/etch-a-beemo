@@ -139,7 +139,7 @@ html{
 #Eraser{
   background-color: #7ac273;
   border: 2px solid #14380b;
-  border-radius: 30px;
+  border-radius: 50px;
   box-shadow: #14380b 4px 4px 0 0;
   color: #14380b;
   cursor: pointer;
@@ -153,6 +153,8 @@ html{
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  width:120px;
+  height:100px;
 }
 
 #Eraser:hover {
@@ -256,7 +258,7 @@ html{
     min-height:50vh;
     align-items:center; 
     padding-top: 4rem;
-    justify-content: space-between; 
+   
    
   }
 
@@ -271,12 +273,14 @@ html{
   }
 
   .mid-board{
-    outline:5px solid black;
+    outline:1px solid black;
     display:flex;
     flex-flow:row;
     justify-content: space-between;
     min-height:10vh;
-    min-width:80%;
+    min-width:100%;
+    align-items: flex-end;
+    
   }
 
   .bottom-board{
@@ -321,3 +325,43 @@ html{
     box-shadow: #1E354A 2px 2px 0 0; 
     transform: translate(2px, 2px);
   }
+
+.round-buttons{
+  display:flex;
+  outline: 1px solid black;
+  flex-flow: row;
+  height:50%;
+  margin-right:4rem;
+
+}
+
+
+#rainbow{
+  background-color: #00E2F4;
+  border: 2px solid #005769;
+  border-radius: 50px;
+  box-shadow: #005769 4px 4px 0 0;
+  color: #005769;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width:120px;
+  height:100px;
+}
+
+#rainbow:hover {
+  background-color: #56e3ff;
+}
+
+#rainbow:active {
+  box-shadow: #005769 2px 2px 0 0; 
+  transform: translate(2px, 2px);
+}
