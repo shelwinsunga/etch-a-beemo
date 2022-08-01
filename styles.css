@@ -19,7 +19,7 @@ html{
 }
 
 .container {
-    outline: 1px solid black;
+ 
     display:flex;
     flex-flow:column;
     align-items: center;
@@ -167,6 +167,7 @@ html{
 
 
 .cell {
+  
     min-width: 30px;
     min-height: 30px;
     display: inline-block;
@@ -242,7 +243,7 @@ html{
   .bottom-container{
     display:flex;
     flex-flow:column;
-    outline:10px solid black;
+  
     align-items:center;
     justify-content: space-between;
     min-height:50vh;
@@ -285,4 +286,38 @@ html{
     justify-content: space-between;
     min-height:10vh;
     min-width:80%;
+  }
+
+
+
+  #draw-button{
+    background-color: #03538c;    ;
+    border: 2px solid #113643;
+    border-radius: 30px;
+    box-shadow: #113643 4px 4px 0 0;
+    color: #b4ccdd;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    display:flex;
+    justify-content: center;
+    width:60px;
+    margin-right:3rem;
+  }
+  
+  #draw-button:hover {
+    background-color: #6898ba;
+  }
+  
+ #draw-button:active {
+    box-shadow: #1E354A 2px 2px 0 0; 
+    transform: translate(2px, 2px);
   }
