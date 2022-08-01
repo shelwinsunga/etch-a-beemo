@@ -2,7 +2,7 @@
 
 const container = document.getElementById("grid-container");
 let rows = document.getElementsByClassName("gridRow");
-var size = 16;
+let size = 16;
 
 //Creates a default grid sized 16x16
 function defaultGrid(size) {
@@ -73,11 +73,17 @@ defaultGrid(size);
 // const allCells = document.querySelectorAll(".cell");
 
 let mouseClicking = false;
+function setMode(){
+
+}
+
 
 function draw() {
   const allCells = document.querySelectorAll(".cell");
   var pixelColor = document.getElementById("color-picker");
   const eraserbtn = document.getElementById("Eraser");
+  const drawbtn = document.getElementById('draw-button');
+  let prevColor = "#002222";
   var aColor = "#002222";
 
   allCells.forEach((cell) => {
@@ -92,6 +98,7 @@ function draw() {
 
     cell.addEventListener("mousemove", () => {
       if (mouseClicking == true) {
+        
         cell.style.backgroundColor = aColor;
       }
     });
@@ -105,14 +112,16 @@ function draw() {
     });
   });
   eraserbtn.addEventListener("click", () => {
+    prevColor = aColor;
     aColor = "#c5e5d6";
+  });
+  drawbtn.addEventListener("click" , ()=>{
+    aColor = prevColor;
   });
 }
 
-// draw();
-
 function clearGrid() {
-  const allCells = document.querySelectorAll(".cell");
+  // const allCells = document.querySelectorAll(".cell");
   const clearbtn = document.getElementById("clear");
   clearbtn.addEventListener("click", () => {
     destroyGrid();
