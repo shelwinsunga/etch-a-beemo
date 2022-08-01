@@ -284,12 +284,25 @@ html{
   }
 
   .bottom-board{
-    outline:5px solid black;
+    outline:1px solid black;
     display:flex;
     flex-flow:row;
     justify-content: space-between;
     min-height:10vh;
     min-width:80%;
+  }
+
+
+  .cross{
+    display:flex;
+    outline:1px solid black;
+
+    
+  }
+
+  #cross-button{
+    width:400px;
+    height:200px;
   }
 
 
@@ -336,6 +349,8 @@ html{
 }
 
 
+
+
 #rainbow{
   background-color: #00E2F4;
   border: 2px solid #005769;
@@ -365,3 +380,4 @@ html{
   box-shadow: #005769 2px 2px 0 0; 
   transform: translate(2px, 2px);
 }
+
