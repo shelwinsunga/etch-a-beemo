@@ -73,16 +73,15 @@ defaultGrid(size);
 // const allCells = document.querySelectorAll(".cell");
 
 let mouseClicking = false;
-function setMode(){
-
-}
-
+function setMode() {}
 
 function draw() {
   const allCells = document.querySelectorAll(".cell");
   var pixelColor = document.getElementById("color-picker");
   const eraserbtn = document.getElementById("Eraser");
-  const drawbtn = document.getElementById('draw-button');
+  const drawbtn = document.getElementById("draw-button");
+  const rainbowbtn = document.getElementById("rainbow");
+  let rainbowMode = false;
   let prevColor = "#002222";
   var aColor = "#002222";
 
@@ -98,8 +97,14 @@ function draw() {
 
     cell.addEventListener("mousemove", () => {
       if (mouseClicking == true) {
-        
-        cell.style.backgroundColor = aColor;
+        if (rainbowMode) {
+          const R = Math.floor(Math.random() * 256);
+          const G = Math.floor(Math.random() * 256);
+          const B = Math.floor(Math.random() * 256);
+          cell.style.backgroundColor = `rgb(${R}, ${G}, ${B})`;
+        } else {
+          cell.style.backgroundColor = aColor;
+        }
       }
     });
 
@@ -108,15 +113,26 @@ function draw() {
     });
 
     pixelColor.addEventListener("input", () => {
+      rainbowMode = false;
       aColor = pixelColor.value;
     });
   });
   eraserbtn.addEventListener("click", () => {
+    rainbowMode = false;
     prevColor = aColor;
     aColor = "#c5e5d6";
   });
-  drawbtn.addEventListener("click" , ()=>{
+  drawbtn.addEventListener("click", () => {
+    rainbowMode = false;
     aColor = prevColor;
+  });
+
+  rainbowbtn.addEventListener("click", () => {
+    if (!rainbowMode) {
+      rainbowMode = true;
+    } else {
+      rainbowMode = false;
+    }
   });
 }
 

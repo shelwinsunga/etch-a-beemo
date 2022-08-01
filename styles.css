@@ -171,12 +171,10 @@ html{
 
 
 .cell {
-  
     min-width: 30px;
     min-height: 30px;
     display: inline-block;
     background:#c5e5d6;
-    
   }
 
   .gridRow{
@@ -192,14 +190,6 @@ html{
     align-items:center;
   }
   
-
-
-  #color-picker{
-   background-color: #02312c;
-   border-radius:10px;
-   width:10rem;
-   height:5vh;
-  }
 
 
   
@@ -283,7 +273,6 @@ html{
   }
 
   .bottom-board{
-    outline:1px solid black;
     display:flex;
     flex-flow:row;
     justify-content: space-between;
@@ -376,7 +365,6 @@ html{
 
 .clear-button{
   display:flex;
-  outline:1px solid black;
   align-items: flex-end;
   margin-top:2rem;
   margin-right:5rem;
@@ -384,7 +372,6 @@ html{
 
 
 .sound-buttons{
-  outline:1px solid black;
   display:flex;
   width:40%;
   flex-flow:row;
@@ -414,5 +401,35 @@ html{
 }
 
 
-#color{
+button,
+input[type='color'] {
+  background-color: #1bbcb1;
+  transition: transform 0.1s ease-in-out;
+}
+
+button:hover,
+input[type='color']:hover {
+  transform: scale(1.05);
+}
+
+input[type='color']:active {
+  transition: transform 0.05s ease-in-out;
+  transform: scale(1);
+}
+
+input[type='color'] {
+  -webkit-appearance: none;
+  width: 80px;
+  height: 80px;
+  border: none;
+}
+
+input[type='color']::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type='color']::-webkit-color-swatch {
+  border: none;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
