@@ -24,7 +24,7 @@ function makeColumns(cellNum) {
     for (j = 0; j < cellNum; j++) {
       //calculate enough pixels to change resolution without changing total size.
       var validRes = 800 / cellNum;
-      var validResVert = 600 / cellNum;
+      var validResVert = 500 / cellNum;
       var validResHoriz = 870 / cellNum;
       let newCell = document.createElement("div");
 

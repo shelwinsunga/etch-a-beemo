@@ -208,15 +208,15 @@ html{
     background-color: #0c5d48;
     color: #062e26;
     cursor: pointer;
-    border: 3px solid;
+    border: 4px solid;
     padding: 0.25em 0.5em;
     box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
     position: relative;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    width:5rem;
-    height:1.5rem;
+    width:10rem;
+    height:2rem;
   }
   
   .pixelbutton:active {
@@ -237,3 +237,52 @@ html{
     justify-content:center;
     align-items:center;
   } */
+
+
+  .bottom-container{
+    display:flex;
+    flex-flow:column;
+    outline:10px solid black;
+    align-items:center;
+    justify-content: space-between;
+    min-height:50vh;
+  }
+  .beemo-board{
+    display:flex;
+    flex-flow:column;
+    outline:1px solid rgb(0, 0, 0);
+    min-width:55rem;
+    min-height:50vh;
+    align-items:center; 
+    padding-top: 4rem;
+    justify-content: space-between; 
+   
+  }
+
+
+  .top-board{
+    outline:1px solid black;
+    display:flex;
+    flex-flow:row;
+    justify-content: space-between;
+    min-height:10vh;
+    min-width:100%;
+  }
+
+  .mid-board{
+    outline:5px solid black;
+    display:flex;
+    flex-flow:row;
+    justify-content: space-between;
+    min-height:10vh;
+    min-width:80%;
+  }
+
+  .bottom-board{
+    outline:5px solid black;
+    display:flex;
+    flex-flow:row;
+    justify-content: space-between;
+    min-height:10vh;
+    min-width:80%;
+  }
