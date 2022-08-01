@@ -1,10 +1,7 @@
-// import * as fs from "fs";
-
 //Sets important constants and variables
 
 const container = document.getElementById("grid-container");
 let rows = document.getElementsByClassName("gridRow");
-let cells = document.getElementsByClassName("cell");
 var size = 16;
 
 //Creates a default grid sized 16x16
@@ -27,16 +24,19 @@ function makeColumns(cellNum) {
     for (j = 0; j < cellNum; j++) {
       //calculate enough pixels to change resolution without changing total size.
       var validRes = 800 / cellNum;
+      var validResVert = 500 / cellNum;
+      var validResHoriz = 870 / cellNum;
       let newCell = document.createElement("div");
 
       rows[j].appendChild(newCell).className = "cell";
       newCell.id = i + " " + j;
-      newCell.style.minHeight = validRes + "px";
-      newCell.style.minWidth = validRes + "px";
+      newCell.style.minHeight = validResVert + "px";
+      newCell.style.minWidth = validResHoriz + "px";
     }
   }
 }
 
+//Destroys Grid for Repurposing
 function destroyGrid() {
   container.innerHTML = "";
 }
@@ -70,9 +70,9 @@ function changeResolution() {
 
 defaultGrid(size);
 
-const allCells = document.querySelectorAll(".cell");
+// const allCells = document.querySelectorAll(".cell");
 
-var mouseClicking = false;
+let mouseClicking = false;
 
 function draw() {
   const allCells = document.querySelectorAll(".cell");
@@ -132,11 +132,10 @@ function clearGrid() {
 //       cellInfo = [cell.id, window.getComputedStyle(cell).backgroundColor];
 //       state.push(cellInfo);
 //     });
-    
+
 //     for(let i = 0; i < state.length * 2; i++){
 //         console.log(state[i][0] + " " + state[i][1]);
 //     }
-
 
 //   });
 // }
@@ -149,7 +148,3 @@ function main() {
 }
 
 main();
-
-
-
-

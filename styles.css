@@ -6,13 +6,21 @@ html{
     background-color:#1bbcb1;
     color:#02312c;
 }
+.body{
+  display:flex;
+  flex-flow:column;
+}
+.header{
+  display:flex;
+  justify-content: center;
+}
 
 .container {
-
+    outline: 1px solid black;
     display:flex;
-    flex-flow:row;
+    flex-flow:column;
+    align-items: center;
     justify-content:center;
-    align-items:center;
     min-height:90vh;
     
 }
