@@ -148,28 +148,36 @@ function clearGrid() {
 
 // var state = [];
 
-// function saveState() {
-//   var cellInfo = [];
-//   const savebtn = document.getElementById("save");
-//   savebtn.addEventListener("click", () => {
-//     state = [];
-//     allCells.forEach((cell) => {
-//       cellInfo = [cell.id, window.getComputedStyle(cell).backgroundColor];
-//       state.push(cellInfo);
-//     });
 
-//     for(let i = 0; i < state.length * 2; i++){
-//         console.log(state[i][0] + " " + state[i][1]);
-//     }
-
-//   });
-// }
-
+function loadBeemoFace() {
+  const allCells = document.querySelectorAll(".cell");
+  allCells.forEach((cell) => {
+    if (
+      cell.id == "2 4" ||
+      cell.id == "5 4" ||
+      cell.id == "10 4" ||
+      cell.id == "13 4" ||
+      cell.id == "3 5" ||
+      cell.id == "4 5" ||
+      cell.id == "11 5" ||
+      cell.id == "12 5" ||
+      cell.id == "5 12" ||
+      cell.id == "10 12" ||
+      cell.id == "6 13" ||
+      cell.id == "7 13" ||
+      cell.id == "8 13" ||
+      cell.id == "9 13"
+    ) {
+      cell.style.backgroundColor = "#002222";
+    }
+  });
+}
 function main() {
   changeResolution();
   draw();
+  loadBeemoFace();
   clearGrid();
-  saveState();
+
 }
 
 main();
