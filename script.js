@@ -84,11 +84,9 @@ function draw() {
   let rainbowMode = false;
   let prevColor = "#002222";
   var aColor = "#002222";
-  let i =0;
-  
+  let i = 0;
 
   allCells.forEach((cell) => {
-    
     cell.addEventListener("mousedown", (e) => {
       mouseClicking = true;
       e.preventDefault();
@@ -99,11 +97,10 @@ function draw() {
     });
 
     cell.addEventListener("mousemove", () => {
-      
       if (mouseClicking == true) {
-        if(i==0){
+        if (i == 0) {
           allCells.forEach((cell) => {
-            cell.style.backgroundColor="#c5e5d6";
+            cell.style.backgroundColor = "#c5e5d6";
           });
           i++;
         }
@@ -154,17 +151,7 @@ function clearGrid() {
     defaultGrid(size);
     draw();
   });
-  // clearbtn.addEventListener("click", () =>{
-  //   allCells.forEach((cell) => {
-  //     cell.style.backgroundColor="#c5e5d6";
-  //   });
-  // });
- 
 }
-
-// var state = [];
-
-
 function loadBeemoFace() {
   const allCells = document.querySelectorAll(".cell");
   allCells.forEach((cell) => {
