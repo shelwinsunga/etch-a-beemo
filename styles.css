@@ -109,13 +109,13 @@ html{
 #clear{
   background-color: #f05557;
   border: 2px solid #4b080b;
-  border-radius: 30px;
+  border-radius: 50px;
   box-shadow: #4b080b 4px 4px 0 0;
   color: #301111;
   cursor: pointer;
   display: inline-block;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 42px;
   padding: 0 18px;
   line-height: 50px;
   text-align: center;
@@ -123,6 +123,8 @@ html{
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  width:200px;
+  height:125px;
 }
 
 #clear:hover {
@@ -253,7 +255,6 @@ html{
   .beemo-board{
     display:flex;
     flex-flow:column;
-    outline:1px solid rgb(0, 0, 0);
     min-width:55rem;
     min-height:50vh;
     align-items:center; 
@@ -264,7 +265,6 @@ html{
 
 
   .top-board{
-    outline:1px solid black;
     display:flex;
     flex-flow:row;
     justify-content: space-between;
@@ -273,7 +273,6 @@ html{
   }
 
   .mid-board{
-    outline:1px solid black;
     display:flex;
     flex-flow:row;
     justify-content: space-between;
@@ -289,16 +288,10 @@ html{
     flex-flow:row;
     justify-content: space-between;
     min-height:10vh;
-    min-width:80%;
+    min-width:100%;
   }
 
 
-  .cross{
-    display:flex;
-    outline:1px solid black;
-
-    
-  }
 
   #cross-button{
     width:400px;
@@ -341,7 +334,6 @@ html{
 
 .round-buttons{
   display:flex;
-  outline: 1px solid black;
   flex-flow: row;
   height:50%;
   margin-right:4rem;
@@ -381,3 +373,42 @@ html{
   transform: translate(2px, 2px);
 }
 
+
+.clear-button{
+  display:flex;
+  outline:1px solid black;
+  align-items: flex-end;
+  margin-top:2rem;
+  margin-right:5rem;
+}
+
+
+.sound-buttons{
+  outline:1px solid black;
+  display:flex;
+  width:40%;
+  flex-flow:row;
+  align-items: flex-end;
+}
+
+#bottom-blue-button{
+  font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #0E05AC;
+    border-radius:30px;
+    color: #001071;
+    cursor: pointer;
+    border: 4px solid;
+    padding: 0.25em 0.5em;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width:10rem;
+    height:2rem;
+    margin-left:1rem;
+}
