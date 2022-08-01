@@ -1,5 +1,4 @@
 //Sets important constants and variables
-
 const container = document.getElementById("grid-container");
 let rows = document.getElementsByClassName("gridRow");
 let size = 16;
@@ -41,12 +40,14 @@ function destroyGrid() {
   container.innerHTML = "";
 }
 
+//Changes Resolution of Grid at Button Press
 function changeResolution() {
   const btn16 = document.getElementById("16px");
   const btn32 = document.getElementById("32px");
   const btn64 = document.getElementById("64px");
 
   btn16.addEventListener("click", () => {
+    //TODO: Refactor
     destroyGrid();
     size = 16;
     defaultGrid(size);
@@ -70,10 +71,7 @@ function changeResolution() {
 
 defaultGrid(size);
 
-// const allCells = document.querySelectorAll(".cell");
-
 let mouseClicking = false;
-function setMode() {}
 
 function draw() {
   const allCells = document.querySelectorAll(".cell");
@@ -84,6 +82,7 @@ function draw() {
   let rainbowMode = false;
   let prevColor = "#002222";
   var aColor = "#002222";
+  // Keeps track of first draw-case
   let i = 0;
 
   allCells.forEach((cell) => {
@@ -98,6 +97,7 @@ function draw() {
 
     cell.addEventListener("mousemove", () => {
       if (mouseClicking == true) {
+        //if its the first draw case, clear beemo face
         if (i == 0) {
           allCells.forEach((cell) => {
             cell.style.backgroundColor = "#c5e5d6";
@@ -144,7 +144,6 @@ function draw() {
 }
 
 function clearGrid() {
-  const allCells = document.querySelectorAll(".cell");
   const clearbtn = document.getElementById("clear");
   clearbtn.addEventListener("click", () => {
     destroyGrid();
@@ -156,6 +155,7 @@ function loadBeemoFace() {
   const allCells = document.querySelectorAll(".cell");
   allCells.forEach((cell) => {
     if (
+      //beemo coords
       cell.id == "2 4" ||
       cell.id == "5 4" ||
       cell.id == "10 4" ||
@@ -175,6 +175,7 @@ function loadBeemoFace() {
     }
   });
 }
+
 function main() {
   changeResolution();
   draw();
