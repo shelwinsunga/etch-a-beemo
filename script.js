@@ -121,6 +121,7 @@ function draw() {
 
     pixelColor.addEventListener("input", () => {
       rainbowMode = false;
+      prevColor = pixelColor.value;
       aColor = pixelColor.value;
     });
   });
